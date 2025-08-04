@@ -8,6 +8,6 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="<%=request.getContextPath()%>/StudentServlet?action=findAllStudent">Danh sách sinh viên</a>
+<a href="login.jsp">Đăng nhập</a>
 </body>
 </html>

@@ -91,7 +91,17 @@ public class StudentController extends HttpServlet {
             } else {
                 req.getRequestDispatcher("error.jsp").forward(req, resp);
             }
-        }else {
+        } else if (action.equals("login")) {
+            String admin = "admin";
+            String adminPassword = "1";
+            String username = req.getParameter("username");
+            String password = req.getParameter("password");
+            if(username.equals(admin) && password.equals(adminPassword)) {
+                findAllStudent(req, resp);
+            }else {
+                req.getRequestDispatcher("error.jsp").forward(req, resp);
+            }
+        } else {
             req.getRequestDispatcher("error.jsp").forward(req, resp);
         }
     }

@@ -11,14 +11,18 @@
     <title>Title</title>
 </head>
 <body>
-<label for="studentId"></label>
-<input type="text" id="studentId" name="studentId">
-<label for="studentName"></label>
-<input type="text" id="studentName" name="studentName">
-<label for="studentAge"></label>
-<input type="text" id="studentAge" name="studentAge">
-<label for="studentAct"></label>
-<checkbox id="studentAct" name="studentAct">Active</checkbox>
-<checkbox id="studentAct" name="studentAct">Deactive</checkbox>
+
+<form action="<%=request.getContextPath()%>/StudentServlet?action=addStudent" method="post">
+
+    <label for="studentName"></label>
+    <input type="text" id="studentName" name="name" placeholder="Stundent-Name">
+    <br>
+    <label for="studentAge"></label>
+    <input type="text" id="studentAge" name="age" placeholder="Stundent-Age">
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
+
 </body>
 </html>

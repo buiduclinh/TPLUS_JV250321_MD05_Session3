@@ -11,6 +11,24 @@
     <title>Title</title>
 </head>
 <body>
-
+<form action="<%=request.getContextPath()%>/StudentServlet?action=updateStudent" method="post">
+    <label for="studentId"></label>
+    <input type="text" id="studentId" name="studentId" value="${student.id}" readonly>
+    <br>
+    <label for="studentName"></label>
+    <input type="text" id="studentName" name="studentName" value="${student.name}">
+    <br>
+    <label for="studentAge"></label>
+    <input type="text" id="studentAge" name="studentAge" value="${student.age}">
+    <br>
+    <label>studentAct:</label><br>
+    <input type="radio" id="active" name="studentAct" value="true" ${student.status?"checked":""}>
+    <label for="active">Active</label>
+    <br>
+    <input type="radio" id="deactive" name="studentAct" value="false" ${student.status?"":"checked"}>
+    <label for="deactive">Deactive</label>
+    <br>
+    <button type="submit">Submit</button>
+</form>
 </body>
 </html>
